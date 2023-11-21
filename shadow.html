@@ -3,26 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sample Shadow and Transform</title>
+    <title>Shadow</title>
 
     <style>
       img {
         width: 200px;
         height: 200px;
-        transform: translate(20px, 10px);
         object-fit: cover;
-        transition: width 2s ease-out 1s;
-        transition: transform 2s ease-out 2s;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-      }
-
-      img:hover {
-        width: 300px;
-        transform: rotate(90deg);
+        /* box shadow: horizontal offset vertical offset blur */
+        box-shadow: #888888 20px 30px 8px;
       }
 
       h1 {
-        text-shadow: 2px 2px 5px lightblue;
+        text-shadow: 3px 2px 5px lightblue;
       }
     </style>
   </head>
