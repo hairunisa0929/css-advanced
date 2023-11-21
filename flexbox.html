@@ -8,9 +8,11 @@
     <style>
       .flex-container {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         background-color: DodgerBlue;
-        height: 100%;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
       }
 
       .flex-container > div {
@@ -20,23 +22,13 @@
         font-size: 30px;
       }
 
-      /* view for tablet and desktop */
-      @media screen and (min-width: 768px) {
-        .flex-container {
-          flex-direction: row;
-          justify-content: center;
-          height: 200px;
-          align-items: center;
-        }
-
-        /* .flex-container > div:nth-child(2) {
-          padding: 40px;
-        }
-
-        .flex-container > div:nth-child(4) {
-          padding: 10px;
-        } */
+      /* .flex-container > div:nth-child(2) {
+        padding: 40px;
       }
+
+      .flex-container > div:nth-child(4) {
+        padding: 10px;
+      } */
     </style>
   </head>
   <body>
