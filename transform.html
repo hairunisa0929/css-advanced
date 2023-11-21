@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transform</title>
+
+    <style>
+      img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+
+        /* ease out: slow out */
+        transition: transform 2s ease-out 1s;
+      }
+
+      img:hover {
+        /* bergeser ke kanan sebesar 30px dan bergeser ke bawah sebesar 40px */
+        transform: translate(30px, 40px);
+
+        /* diputar sebesar 20 derajat */
+        /* transform: rotate(20deg); */
+      }
+
+      h1 {
+        text-shadow: 2px 2px 5px lightblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Ini adalah kucing</h1>
+    <img src="cat-square.jpg" alt="cat" />
+  </body>
+</html>
