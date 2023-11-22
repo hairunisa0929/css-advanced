@@ -3,62 +3,104 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flexbox</title>
+    <title>Responsive</title>
 
     <style>
-      .flex-container {
+      h1 {
+        text-align: center;
+      }
+
+      .cards-container {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+      }
+
+      .card {
+        padding: 10px;
+        border: 1px solid gray;
         display: flex;
         flex-direction: column;
-        background-color: DodgerBlue;
-        height: 100%;
+        border-radius: 8px;
       }
 
-      .flex-container > div {
-        background-color: #f1f1f1;
-        margin: 10px;
-        padding: 20px;
-        font-size: 30px;
+      .card > img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
       }
 
-      /* view for tablet and desktop */
-      @media screen and (min-width: 768px) {
-        .flex-container {
-          flex-direction: row;
-          justify-content: center;
-          height: 200px;
-          align-items: center;
+      .card > span {
+        font-weight: 600;
+        text-align: center;
+      }
+
+      /* view for phone */
+      @media screen and (max-width: 768px) {
+        .cards-container {
+          flex-direction: column;
+          margin: 30px;
         }
 
-        /* .flex-container > div:nth-child(2) {
-          padding: 40px;
+        .card > img {
+          width: 100%;
         }
 
-        .flex-container > div:nth-child(4) {
-          padding: 10px;
-        } */
+        h1 {
+          text-align: left;
+        }
+      }
+
+      @media screen and (min-width: 768px) and (max-width: 1023px) {
+        .cards-container {
+          flex-direction: column;
+          margin: 80px;
+        }
+
+        .card > img {
+          width: 50%;
+        }
       }
     </style>
   </head>
   <body>
-    <h1>Create a Flex Container</h1>
-
-    <div class="flex-container">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
-      <div>4</div>
-      <div>5</div>
-      <div>6</div>
+    <h1>Gallery</h1>
+    <div class="cards-container">
+      <div class="card">
+        <img
+          src="https://images.unsplash.com/photo-1554396133-3ff490ac1c6d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YnJpdGlzaCUyMHNob3J0aGFpcnxlbnwwfHwwfHx8MA%3D%3D"
+          alt="foto-1"
+        />
+        <span>British Shorthair</span>
+      </div>
+      <div class="card">
+        <img
+          src="https://images.unsplash.com/photo-1595433708220-3aa013e5e43f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8c2NvdHRpc2glMjBmb2xkfGVufDB8fDB8fHww"
+          alt="foto-2"
+        />
+        <span>Scottish Fold</span>
+      </div>
+      <div class="card">
+        <img
+          src="https://images.unsplash.com/photo-1615161625133-0fd9282ddfd3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cnVzc2lhbiUyMGJsdWV8ZW58MHx8MHx8fDA%3D"
+          alt="foto-3"
+        />
+        <span>Russian Blue</span>
+      </div>
+      <div class="card">
+        <img
+          src="https://images.unsplash.com/photo-1633894660288-003802421573?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHJhZ2RvbGwlMjBjYXR8ZW58MHx8MHx8fDA%3D"
+          alt="foto-4"
+        />
+        <span>Ragdoll</span>
+      </div>
+      <div class="card">
+        <img
+          src="https://images.unsplash.com/photo-1645996598279-4381636a4155?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c25vd3Nob2UlMjBjYXR8ZW58MHx8MHx8fDA%3D"
+          alt="foto-5"
+        />
+        <span>Snowshoe</span>
+      </div>
     </div>
-
-    <p>
-      A Flexible Layout must have a parent element with the
-      <em>display</em> property set to <em>flex</em>.
-    </p>
-
-    <p>
-      Direct child elements(s) of the flexible container automatically becomes
-      flexible items.
-    </p>
   </body>
 </html>
